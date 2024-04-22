@@ -8,7 +8,7 @@ const TaskItem = ({task}) => {
      if(!task) return null;
     const dispatch = useDispatch();
     const handleDeleteTask = (taskId) => {
-        if(window.confirm("Are you sure !!")){
+        if(window.confirm("Are you sure to delete !!")){
             dispatch(deleteTodo({ id: taskId }));
         }
       };
