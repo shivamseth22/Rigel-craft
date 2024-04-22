@@ -11,7 +11,7 @@ const TaskList = () => {
     <Box mt={2}>
         {tasks.map((task ,index) => (
             <>
-            {console.log("task" , task.index)}
+            {console.log("task" , task.id)}
                 <TaskItem task={task} key={index}/>
             </>
 
