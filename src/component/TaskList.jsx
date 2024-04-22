@@ -9,10 +9,9 @@ const TaskList = () => {
 
   return (
     <Box mt={2}>
-        {tasks.map((task ,index) => (
+        {tasks.map((task) => (
             <>
-            {console.log("task" , task.id)}
-                <TaskItem task={task} key={index}/>
+                <TaskItem task={task} key={task?.id}/>
             </>
 
         ))}
