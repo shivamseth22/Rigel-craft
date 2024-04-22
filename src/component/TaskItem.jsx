@@ -5,15 +5,21 @@ import { Box, Checkbox, IconButton, Typography } from '@mui/material';
 import { Delete } from '@mui/icons-material';
 
 const TaskItem = ({task}) => {
+     if(!task) return null;
     const dispatch = useDispatch();
     const handleDeleteTask = (taskId) => {
-        dispatch(deleteTodo({ id: taskId }));
+        if(window.confirm("Are you sure !!")){
+            dispatch(deleteTodo({ id: taskId }));
+        }
       };
 
       const handleToggleComplete = (taskId) => {
         dispatch(toggleComplete({ id: taskId }));
       };
+
+
   return (
+
     <Box key={task.id} display="flex" alignItems="center">
             <Checkbox
               checked={task.completed}
